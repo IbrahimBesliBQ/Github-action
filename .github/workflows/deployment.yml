@@ -9,7 +9,7 @@ jobs:
            - name: Install Dependicies
              run: npm ci
            - name: Lint
-             run: npm run lint
+             run: npm lint
     test:
       needs: lint
       runs-on: ubuntu-latest
@@ -23,7 +23,7 @@ jobs:
             - name: Install dependicies
               run: npm ci
             - name: Run tests
-              run: npm run test   
+              run: npm test   
     deploy:
       needs: test 
       runs-on: ubuntu-latest
@@ -37,7 +37,7 @@ jobs:
             - name: Install dependicies
               run: npm ci
             - name: Build project
-              run: npm run build 
+              run: npm build 
             - name: Deploy
               run: echo "${{ toJson(github)}}"      
 
