@@ -1,0 +1,6 @@
+node_modules/
+build/
+dist/
+*.json
+*.md
+vite.config.js
